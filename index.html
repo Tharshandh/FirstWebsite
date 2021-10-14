@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="container"> 
+            <div class="navbar">
+                
+                <div class="left">                  <!-- Left side of Nav bar -->
+                    <div class="pages" active-page>
+                        <a href="index.html">HOME</a>
+                    </div>
+                    <div class="pages">
+                        <a href="about.html">ABOUT</a>
+                    </div>
+                </div>
+
+                <div class="right">                 <!-- Right side of Nav bar -->
+                    <div>Kontakt</div>
+                </div>
+            </div>
+
+            <div class="content">                   <!-- Grid Section -->
+                <div class="portfolio">
+                        
+                    <div class="images">
+                        <div class="img" style="background-image:url(images/code.jpg)"></div>
+
+                        <div class="logo-comment">
+                            <div class="logo">
+                                <img src="images/logos/jsIcon.png" alt="">
+                            </div>
+
+                            <div class="comment">As the User hovers over this the image darkens and the text turns visible. This was coded with the eventListener Method in JavaScript.</div>
+                        </div>
+                    </div>
+
+                    <div class="images">
+                        <div class="img" style="background-image:url(images/magGlas.jpg)"></div>
+                    
+                        <div class="logo-comment">
+                            <div class="logo">
+                                <img src="images/logos/devcamp.png" alt="">
+                            </div>
+
+                            <div class="comment">This Website was built with the help from the Udemy free online course for HTML and CSS.</div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const portfolioImages = document.querySelectorAll('.images');       //select all images
+
+        portfolioImages.forEach(portfolioImage => {                         //mouseover Event
+            portfolioImage.addEventListener('mouseover', () => {
+                portfolioImage.childNodes[1].classList.add('img-transition');
+            })
+
+            portfolioImage.addEventListener('mouseout', () => {
+                portfolioImage.childNodes[1].classList.remove('img-transition');
+            })
+            
+         })
+        
+    </script>
+
+</html>

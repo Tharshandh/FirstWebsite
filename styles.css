@@ -1,0 +1,131 @@
+body {
+    margin: 0px;
+    background-color: rgb(224, 217, 217);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* Nav bar css*/
+.navbar{
+    display: flex;  /*Ignore child elements, only look at right and left*/
+    justify-content: space-between; /*Space between right and left side*/
+    padding: 30px;
+}
+
+.left{
+    display: flex;
+}
+
+.navbar > .left > div { /*All divs on the left side*/
+    margin-right:20px;
+    font-size: 0.9em;
+}
+
+.pages {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.pages a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.pages:hover {
+    border-bottom: 1px solid black;
+}
+
+.pages a:hover {
+    color: black;
+}
+
+.active-page { /*borderline active on current page*/
+    border-bottom: 1px solid black;
+}
+
+.active-page a{
+    color: black !important;
+}
+
+
+/*Portfolio css*/
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.images {
+    position: relative;
+}
+
+.img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 650px;
+    width: 100%;
+}
+
+.logo-comment {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /*Left to right*/
+    align-items: center;        /*Top to bottom*/
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.images img{        /*Logo size*/
+    width:50%;
+    margin-bottom:20px;
+}
+
+.logo-comment .comment{
+    font-weight: 600;
+    transition: 1s;
+    color: transparent;
+}
+
+.logo-comment:hover .comment{
+    font-weight: 600;
+    color: lightgreen;
+}
+
+.img-transition {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/*About Page*/
+
+.text-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.image img{
+    width: 40%;
+    padding-left: 150px;
+    padding-top: 50px;
+}
+
+.text {
+    padding: 30px;
+    font-size: 30px;
+}
+
+.text h1 {
+    color: black;
+    font-size: 60px;
+}
+
